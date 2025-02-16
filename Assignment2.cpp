@@ -378,16 +378,17 @@ int main()
     bool isFileLoaded = false; // check if the file is loaded
     do
     {
-        cout << "\n=============== iTaxPro System ===============\n"
+    	
+        cout << "\n\t\t=============== iTaxPro System ===============\n\n"
              << "1. Load data from file and calculate tax amount\n"
-             << "2. Display all personnel information in the chain list\n"
-             << "3. Add a new personnel\n"
-             << "4. Display personnel estimated tax based on Job ID\n"
-             << "5. Delete personnel data based on Job ID\n"
+             << "2. Display all personal information in the chain list\n"
+             << "3. Add a new personal\n"
+             << "4. Display personal estimated tax based on Job ID\n"
+             << "5. Delete personal data based on Job ID\n"
              << "6. Display total number of individuals in each tax category\n"
              << "0. Exit\n"
              << "==============================================\n"
-             << "Please select your choice: ";
+             << "\nPlease select your choice: ";
 
         // input validation for choice
         while (true)
@@ -409,7 +410,7 @@ int main()
         {
             if (isFileLoaded)
             {
-                cout << "DataFile already loaded. Please select another option.\n";
+                cout << "DataFile already loaded. Please select another option.\n\n";
                 continue;
             }
 
@@ -461,14 +462,14 @@ int main()
 
             isFileLoaded = true; // set the flag to true
             
-            cout << "Data has been loaded from file \"" << filename << "\" and inserted into the list.\n";
+            cout << "Data has been loaded from file \"" << filename << "\" and inserted into the list.\n\n";
         }
         else if (choice == 2) // Display all personnel information in the chain list
         {
             // check if the file is loaded
             if (!isFileLoaded)
             {
-                cout << "DataFile is not loaded. Please select option 1 to load data first.\n";
+                cout << "DataFile is not loaded. Please select option 1 to load data first.\n\n";
                 continue;
             }
 
@@ -480,7 +481,7 @@ int main()
             // check if the file is loaded
             if (!isFileLoaded)
             {
-                cout << "DataFile is not loaded. Please select option 1 to load data first.\n";
+                cout << "DataFile is not loaded. Please select option 1 to load data first.\n\n";
                 continue;
             }
 
@@ -488,7 +489,7 @@ int main()
             string name, jobId;
             double income;
 
-            cout << "\nEnter new personnel information:\n";
+            cout << "\nEnter new personal information:\n\n";
             cout << "Name: ";
             cin.ignore(); // Clear buffer
             getline(cin, name); // Allow spaces in name
